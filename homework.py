@@ -25,6 +25,9 @@ HOMEWORK_VERDICTS = {
     'reviewing': 'Работа взята на проверку ревьюером.',
     'rejected': 'Работа проверена: у ревьюера есть замечания.'
 }
+# Бот присылает два сообщения: о том что стотусов нет и само наполнение
+# HOMEWORK_VERDICTS. Но все в кодировке "approved": "\u0420\u0430\u0431...
+# Если изменить на ENGLISH русские слова то все норм. Так и не разобрался
 
 
 def check_tokens():
@@ -40,11 +43,11 @@ def send_message(bot, message):
             chat_id=TELEGRAM_CHAT_ID,
             text=message,
         )
-    except exceptions.TelegramError as error:
-        raise exceptions.TelegramError(
+    except telegram.TelegramError as error:
+        logging.error(
             f'Не удалось отправить сообщение {error}')
     else:
-        logging.info(f'Сообщение отправлено {message}')
+        logging.debug(f'Сообщение отправлено {message}')
 
 
 def get_api_answer(timestamp):
@@ -84,24 +87,20 @@ def check_response(response):
         raise exceptions.EmptyResponseFromAPI('Пустой ответ от API')
     homeworks = response.get('homeworks')
     if not isinstance(homeworks, list):
-        raise KeyError('Homeworks не является списком')
+        raise TypeError('Homeworks не является списком')
     return homeworks
 
 
 def parse_status(homework):
     """Распарсить ответ."""
-    if 'homework_name' not in homework:
-        raise KeyError('В ответе отсутсвует ключ homework_name')
     homework_name = homework.get('homework_name')
     homework_status = homework.get('status')
+    if 'homework_name' not in homework:
+        raise KeyError('В ответе отсутсвует ключ homework_name')
     if homework_status not in HOMEWORK_VERDICTS:
         raise ValueError(f'Неизвестный статус работы - {homework_status}')
-    return (
-        'Изменился статус проверки работы "{homework_name}" {verdict}'
-    ).format(
-        homework_name=homework_name,
-        verdict=HOMEWORK_VERDICTS[homework_status]
-    )
+    verdict = HOMEWORK_VERDICTS[homework_status]
+    return f'Изменился статус проверки работы "{homework_name}". {verdict}'
 
 
 def main():
@@ -111,6 +110,7 @@ def main():
                          ' переменных окружения')
         sys.exit('Отсутсвуют переменные окружения')
     bot = telegram.Bot(token=TELEGRAM_TOKEN)
+    send_message(bot, HOMEWORK_VERDICTS)
     timestamp = int(time.time())
     current_report = {
         'name': '',
