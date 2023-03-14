@@ -1,0 +1,3 @@
+2023-03-14 13:31:15,736, INFO, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - get_api_answer, Номер строки - 59, Начало запроса: url = https://practicum.yandex.ru/api/user_api/homework_statuses/,headers = {'Authorization': 'OAuth y0_AgAAAAAjozaXAAYckQAAAADeRCDEBxKXR2IQS16XcCmylQZoQETIDTQ'},params = {'from_date': 1678789875}
+2023-03-14 13:31:15,925, INFO, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - send_message, Номер строки - 38, Начало отправки
+2023-03-14 13:31:16,160, INFO, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - send_message, Номер строки - 47, Сообщение отправлено   Нет новых статусов работ.
