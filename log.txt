@@ -21,3 +21,9 @@
 2023-03-14 15:10:13,571, INFO, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - send_message, Номер строки - 41, Начало отправки
 2023-03-14 15:10:13,834, INFO, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - get_api_answer, Номер строки - 62, Начало запроса: url = https://practicum.yandex.ru/api/user_api/homework_statuses/,headers = {'Authorization': 'OAuth y0_AgAAAAAjozaXAAYckQAAAADeRCDEBxKXR2IQS16XcCmylQZoQETIDTQ'},params = {'from_date': 1678795813}
 2023-03-14 15:10:14,072, INFO, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - send_message, Номер строки - 41, Начало отправки
+2023-03-18 01:44:05,182, INFO, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - send_message, Номер строки - 41, Начало отправки
+2023-03-18 01:44:05,460, INFO, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - get_api_answer, Номер строки - 62, Начало запроса: url = https://practicum.yandex.ru/api/user_api/homework_statuses/,headers = {'Authorization': 'OAuth y0_AgAAAAAjozaXAAYckQAAAADeRCDEBxKXR2IQS16XcCmylQZoQETIDTQ'},params = {'from_date': 1679093045}
+2023-03-18 01:44:05,662, INFO, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - send_message, Номер строки - 41, Начало отправки
+2023-03-18 02:42:55,300, INFO, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - send_message, Номер строки - 40, Начало отправки
+2023-03-18 02:42:55,513, INFO, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - get_api_answer, Номер строки - 61, Начало запроса: url = https://practicum.yandex.ru/api/user_api/homework_statuses/,headers = {'Authorization': 'OAuth y0_AgAAAAAjozaXAAYckQAAAADeRCDEBxKXR2IQS16XcCmylQZoQETIDTQ'},params = {'from_date': 1679096575}
+2023-03-18 02:42:55,680, INFO, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - send_message, Номер строки - 40, Начало отправки

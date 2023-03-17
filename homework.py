@@ -37,8 +37,8 @@ def check_tokens():
 
 def send_message(bot, message):
     """Отправляет сообщение в Telegram чат."""
+    logging.info('Начало отправки')
     try:
-        logging.info('Начало отправки')
         bot.send_message(
             chat_id=TELEGRAM_CHAT_ID,
             text=message,
@@ -58,11 +58,11 @@ def get_api_answer(timestamp):
         'headers': HEADERS,
         'params': {'from_date': timestamp},
     }
+    logging.info(
+        'Начало запроса: url = {url},'
+        'headers = {headers},'
+        'params = {params}'.format(**params_request))
     try:
-        logging.info(
-            'Начало запроса: url = {url},'
-            'headers = {headers},'
-            'params = {params}'.format(**params_request))
         homework_statuses = requests.get(**params_request)
         if homework_statuses.status_code != HTTPStatus.OK:
             raise exceptions.InvalidResponseCode(
@@ -135,9 +135,6 @@ def main():
                 prev_report = current_report.copy()
             else:
                 logging.debug('Статус не поменялся')
-        except exceptions.NotForSending as error:
-            message = f'Сбой в работе программы: {error}'
-            logging.error(message)
         except Exception as error:
             message = f'Сбой в работе программы: {error}'
             current_report['output'] = message
