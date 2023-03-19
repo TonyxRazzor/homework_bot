@@ -3,3 +3,9 @@
 2023-03-19 14:57:09,367, CRITICAL, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - main, Номер строки - 107, Отсутствует необходимое кол-во переменных окружения
 2023-03-19 14:58:48,455, CRITICAL, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - main, Номер строки - 107, Отсутствует необходимое кол-во переменных окружения
 2023-03-19 15:00:06,108, CRITICAL, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - main, Номер строки - 107, Отсутствует необходимое кол-во переменных окружения
+2023-03-19 15:03:09,734, CRITICAL, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - main, Номер строки - 107, Отсутствует необходимое кол-во переменных окружения
+2023-03-19 15:03:40,476, CRITICAL, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - main, Номер строки - 107, Отсутствует необходимое кол-во переменных окружения
+2023-03-19 15:10:47,388, CRITICAL, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - main, Номер строки - 107, Отсутствует необходимое кол-во переменных окружения
+2023-03-19 15:16:02,174, INFO, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - send_message, Номер строки - 38, Начало отправки
+2023-03-19 15:16:02,406, INFO, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - get_api_answer, Номер строки - 59, Начало запроса: url = https://practicum.yandex.ru/api/user_api/homework_statuses/,headers = {'Authorization': 'OAuth y0_AgAAAAAjozaXAAYckQAAAADeRCDEBxKXR2IQS16XcCmylQZoQETIDTQ'},params = {'from_date': 1679228162}
+2023-03-19 15:16:02,652, INFO, Путь - r:\Dev\homework_bot\homework.py, Файл - homework.py, Функция - send_message, Номер строки - 38, Начало отправки
