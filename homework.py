@@ -1,10 +1,11 @@
-import telegram
-import time
-import requests
 import logging
-import sys
 import os
+import sys
+import time
+
 import exceptions
+import requests
+import telegram
 from dotenv import load_dotenv
 from http import HTTPStatus
 
@@ -25,9 +26,6 @@ HOMEWORK_VERDICTS = {
     'reviewing': 'Работа взята на проверку ревьюером.',
     'rejected': 'Работа проверена: у ревьюера есть замечания.'
 }
-# Бот присылает два сообщения: о том что стотусов нет и само наполнение
-# HOMEWORK_VERDICTS. Но все в кодировке "approved": "\u0420\u0430\u0431...
-# Если изменить на ENGLISH русские слова то все норм. Так и не разобрался
 
 
 def check_tokens():
